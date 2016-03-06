@@ -43,7 +43,7 @@ module.exports = function (grunt) {
 					vendor: [
 						'node_modules/systemjs/dist/system.js'
 					],
-					helpers: ['http://localhost:35729/livereload.js'],
+					helpers: [],
 					keepRunner: false,
 					outfile: TEST_DIR + '/test.html',
 					specs: [TEST_DIR + '/test.js']
