@@ -10,14 +10,6 @@ describe('Module "car"', function () {
 		spyOn(car, 'land').and.callThrough()
 	})
 	
-	afterEach(function(){
-		car.speed = 0
-		car.seats = 4
-		car.maxSpeed = 100
-		car.defaultSpeed = 60
-		car.passengers.length = 0;
-	})	
-	
 	describe('has a correct interface with a property', function(){
 		it('"color" that is a String', function(){
 			expect(car.color).toEqual(jasmine.any(String))	
@@ -76,6 +68,14 @@ describe('Module "car"', function () {
 	})
 	
 	describe('pessangers', function(){
+		afterEach(function(){
+			car.speed = 0
+			car.seats = 8
+			car.maxSpeed = 200
+			car.defaultSpeed = 150
+			car.passengers.length = 0;
+		})	
+		
 		it('can be put', function(){
 			car.put()
 			car.put()
@@ -99,6 +99,14 @@ describe('Module "car"', function () {
 	})
 	
 	describe('when drived', function(){
+		afterEach(function(){
+			car.speed = 0
+			car.seats = 8
+			car.maxSpeed = 200
+			car.defaultSpeed = 150
+			car.passengers.length = 0;
+		})	
+		
 		it('can\'t drive without a driver', function(){
 			car.drive()
 			
