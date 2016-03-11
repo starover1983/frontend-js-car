@@ -17,7 +17,7 @@ describe('Module "car"', function () {
 		it('"dours" that is a Number', function(){
 			expect(car.dours).toEqual(jasmine.any(Number))	
 		})
-		it('"passengers" that is a String', function(){
+		it('"passengers" that is a Array', function(){
 			expect(car.passengers).toEqual(jasmine.any(Array))	
 		})
 		it('"seats" that is a Number', function(){
